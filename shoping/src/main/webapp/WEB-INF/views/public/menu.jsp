@@ -2,7 +2,7 @@
 			<div class="mp-pusher" id="mp-pusher">
 
 				<!-- mp-menu -->
-				<nav id="mp-menu" class="mp-menu">
+				<nav id="mp-menu" class="mp-menu wc-blue">
 					<div class="mp-level">
 						<h2 class="icon icon-world">Galaxy Solution</h2>
 						<ul>

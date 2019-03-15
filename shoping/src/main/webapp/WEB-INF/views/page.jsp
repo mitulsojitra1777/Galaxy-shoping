@@ -33,7 +33,7 @@
 <body>
 	<div class="container">
 		<%@include file="public/menu.jsp" %>
-		<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+		<div class="scroller wc-white"><!-- this is for emulating position fixed of the nav -->
 					<%@include file="public/header.jsp" %>
 				</div><!-- /scroller -->
 			<%@include file="public/footer.jsp" %>
