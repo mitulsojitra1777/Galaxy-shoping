@@ -23,6 +23,7 @@
 </script>
 <!-- Bootstrap core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="resources/css/r-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="resources/css/shop-homepage.css" rel="stylesheet">
