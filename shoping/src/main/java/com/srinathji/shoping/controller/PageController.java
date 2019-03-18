@@ -13,7 +13,7 @@ public class PageController {
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("page", "home");
-		mv.addObject("message", "Welcome to galaxy ace");
+		mv.addObject("userClickHome", true);
 		return mv;
 	}
 
@@ -21,7 +21,7 @@ public class PageController {
 	public ModelAndView contact() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("page", "contact");
-		mv.addObject("message", "Welcome to galaxy ace");
+		mv.addObject("userClickContact", true);
 		return mv;
 	}
 
@@ -29,7 +29,7 @@ public class PageController {
 	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("page", "about");
-		mv.addObject("message", "Welcome to galaxy ace");
+		mv.addObject("userClickAbout", true);
 		return mv;
 	}
 
