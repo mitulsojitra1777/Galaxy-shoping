@@ -1,18 +1,25 @@
 package com.srinathji.shoping.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.srinathji.shopngback.dao.CategoryDao;
+import com.srinathji.shopngback.daoimpl.CategoryDaoImpl;
+
 @Controller
 public class PageController {
 
+	@Autowired
+	private CategoryDao categoryDao; 
 	@RequestMapping(value = { "/", "/home", "/index" })
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("page", "home");
+		mv.addObject("catogeries", categoryDao.list());
 		mv.addObject("userClickHome", true);
 		return mv;
 	}

@@ -14,6 +14,12 @@
 		<jstl-version>1.2</jstl-version>
 	</properties>
 	<dependencies>
+		<!-- link my backend project -->
+		<dependency>
+			<groupId>com.srinathji</groupId>
+			<artifactId>shopngback</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- javaee -->
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>

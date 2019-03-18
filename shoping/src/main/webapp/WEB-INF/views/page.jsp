@@ -33,16 +33,16 @@
 		<%@include file="public/menu.jsp"%>
 		<!-- Page Content -->
 		<div class="container">
-
+			
 			<!-- page content add -->
 			<c:if test="${userClickAbout}">
-				<%@include file="pages/about.jsp" %>
+				<%@include file="pages/about.jsp"%>
 			</c:if>
 			<c:if test="${userClickContact}">
-				<%@include file="pages/contact.jsp" %>
+				<%@include file="pages/contact.jsp"%>
 			</c:if>
 			<c:if test="${userClickHome}">
-				<%@include file="pages/home.jsp" %>
+				<%@include file="pages/home.jsp"%>
 			</c:if>
 		</div>
 		<!-- /.container -->
