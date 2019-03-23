@@ -7,6 +7,7 @@ import com.srinathji.shopngback.dto.Category;
 public interface CategoryDao {
 
 	List<Category> list();
+	Category getCategoryById(int id);
 	
 	
 }

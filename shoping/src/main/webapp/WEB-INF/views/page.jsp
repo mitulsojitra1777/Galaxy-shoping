@@ -44,6 +44,9 @@
 			<c:if test="${userClickHome}">
 				<%@include file="pages/home.jsp"%>
 			</c:if>
+			<c:if test="${userClickCategoryProducts or userClickAllProducts}">
+				<%@include file="pages/listproducts.jsp"%>
+			</c:if>
 		</div>
 		<!-- /.container -->
 

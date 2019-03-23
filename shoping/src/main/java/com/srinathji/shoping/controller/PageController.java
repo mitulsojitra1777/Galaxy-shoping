@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.srinathji.shopngback.dao.CategoryDao;
 import com.srinathji.shopngback.daoimpl.CategoryDaoImpl;
+import com.srinathji.shopngback.dto.Category;
 
 @Controller
 public class PageController {
@@ -21,6 +22,7 @@ public class PageController {
 		mv.addObject("page", "home");
 		mv.addObject("catogeries", categoryDao.list());
 		mv.addObject("userClickHome", true);
+		
 		return mv;
 	}
 
@@ -31,7 +33,15 @@ public class PageController {
 		mv.addObject("userClickContact", true);
 		return mv;
 	}
-
+	
+	@RequestMapping(value = { "/show/all/product" })
+	public ModelAndView showAllProduct() {
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("page", "contact");
+		mv.addObject("userClickAllProducts", true);
+		return mv;
+	}
+	
 	@RequestMapping(value = { "/about" })
 	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("page");
@@ -39,6 +49,20 @@ public class PageController {
 		mv.addObject("userClickAbout", true);
 		return mv;
 	}
+	
+	@RequestMapping(value = { "/show/catogery/{id}/products" })
+	public ModelAndView showCategorywiseProduct(@PathVariable("id") int id) {
+		Category category=null;
+		category=categoryDao.getCategoryById(id);
+		ModelAndView mv = new ModelAndView("page");
+		mv.addObject("page", category.getName());
+		mv.addObject("catogeries", categoryDao.list());
+		mv.addObject("catogery", category);
+		mv.addObject("userClickCategoryProducts", true);
+		mv.addObject("id", id);
+		return mv;
+	}
+
 
 	// queary string just Like
 	// http://localhost:8080/shoping/testQuery?greeting=how r u
