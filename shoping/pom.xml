@@ -10,7 +10,7 @@
 	<properties>
 		<javaee-version>7.0</javaee-version>
 		<spring.version>4.3.6.RELEASE</spring.version>
-		<junit-version>3.8.1</junit-version>
+		<junit-version>4.12</junit-version>
 		<jstl-version>1.2</jstl-version>
 	</properties>
 	<dependencies>
@@ -59,8 +59,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 		</plugins>

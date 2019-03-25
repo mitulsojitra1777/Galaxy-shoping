@@ -22,11 +22,11 @@
 	window.menu = "${page}";
 </script>
 <!-- Bootstrap core CSS -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="resources/css/r-theme.css" rel="stylesheet">
+<link href="${contextRoot}${contextRoot}/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="${contextRoot}/resources/css/r-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="resources/css/shop-homepage.css" rel="stylesheet">
+<link href="${contextRoot}/resources/css/shop-homepage.css" rel="stylesheet">
 </head>
 <body>
 	<div class="wrapper">
@@ -34,6 +34,7 @@
 		<!-- Page Content -->
 		<div class="container">
 			
+		
 			<!-- page content add -->
 			<c:if test="${userClickAbout}">
 				<%@include file="pages/about.jsp"%>
@@ -47,16 +48,17 @@
 			<c:if test="${userClickCategoryProducts or userClickAllProducts}">
 				<%@include file="pages/listproducts.jsp"%>
 			</c:if>
+			
 		</div>
 		<!-- /.container -->
 
 		<%@include file="public/footer.jsp"%>
 
 		<!-- Bootstrap core JavaScript -->
-		<script src="resources/js/jquery.min.js"></script>
-		<script src="resources/js/bootstrap.bundle.min.js"></script>
+		<script src="${contextRoot}/resources/js/jquery.min.js"></script>
+		<script src="${contextRoot}/resources/js/bootstrap.bundle.min.js"></script>
 		<!-- self coded JavaScript -->
-		<script src="resources/js/myapp.js"></script>
+		<script src="${contextRoot}/resources/js/myapp.js"></script>
 	</div>
 </body>
 </html>
