@@ -22,7 +22,7 @@ CREATE TABLE user_detail (
  	is_active BOOLEAN,
  	mobile int,
  	email VARCHAR(100),
- 	ui_key int,
+ 	password varchar(50),
 	CONSTRAINT pk_user_detail_id PRIMARY KEY(id)	
 );
 
