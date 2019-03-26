@@ -55,12 +55,12 @@ public class CategoryTestCase {
 		 Assert.assertEquals("successfully update category..... ",true,
 				 categoryDao.updateCategory(category) );
 	 }*/
-//	@Test
-//	public void getallcat() {
-//		
-//		Assert.assertEquals("successfully get all catogory  from category table..... ","5",
-//				 categoryDao.list());
-//		//System.out.println(category.getName()+","+category.getImageurl());
-//		
-//	}
+	@Test
+	public void getallcat() {
+		
+		Assert.assertEquals("successfully get all catogory  from category table..... ","5",
+				 categoryDao.list());
+		//System.out.println(category.getName()+","+category.getImageurl());
+		
+	}
 }
