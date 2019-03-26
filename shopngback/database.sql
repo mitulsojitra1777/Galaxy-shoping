@@ -33,7 +33,7 @@ CREATE TABLE product (
 	name VARCHAR(50),
 	brand VARCHAR(50)
 	descreption VARCHAR(255),
-	unit_price boolean,
+	unit_price double,
 	quntity INTEGER,
 	is_active BOOLEAN,
 	category_id INT,
