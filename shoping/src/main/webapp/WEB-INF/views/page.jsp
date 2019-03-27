@@ -22,7 +22,7 @@
 	window.menu = "${page}";
 </script>
 <!-- Bootstrap core CSS -->
-<link href="${contextRoot}${contextRoot}/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="${contextRoot}/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="${contextRoot}/resources/css/r-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
