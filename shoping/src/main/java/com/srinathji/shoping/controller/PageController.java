@@ -63,19 +63,7 @@ public class PageController {
 		mv.addObject("id", id);
 		return mv;
 	}
-	@RequestMapping(value = { "/show" })
-	public ModelAndView showCategorwiseProduct() {
-		Category category=null;
-		category=categoryDao.getCategoryById(1);
-		ModelAndView mv = new ModelAndView("page");
-		mv.addObject("page", "about");
-//		mv.addObject("page", category.getName());
-		mv.addObject("catogeries", categoryDao.list());
-		mv.addObject("catogery", category);
-		mv.addObject("userClickCategoryProducts", true);
-		mv.addObject("id", id);
-		return mv;
-	}
+	
 
 
 

@@ -14,7 +14,7 @@ public class UserTestCase {
 	private static AnnotationConfigApplicationContext context;
 
 	private static UserDao userDao;
-	private User user;
+	private User user, user1,user2;
 	
 
 	@BeforeClass
@@ -27,16 +27,19 @@ public class UserTestCase {
 
 	}
 
-	// @Test
-	// public void addcetogery(){
-	// category=new Category();
-	// category.setName("tv");
-	// category.setImageurl("tv.png");
-	// category.setDescription("tv");
-	// category.setActive(true);
-	// Assert.assertEquals("successfully add category..... ",true,
-	// categoryDao.addCategory(category) );
-	// }
+	@Test
+	public void addcetogery() {
+		user=new User("dainik", "patel", "user", true, "999999999", "dainik.patel@galaxy.com", "dainik@123");
+		user1=new User("prakash", "vaghashiya", "suplayer", true, "999999999", "prakash.vagashiya@galaxy.com", "prakash@123");
+		user2=new User("chetan", "sojitra", "admin", true, "999999999", "chetan.sojitra@galaxy.com", "chetan@123");
+
+
+		
+		Assert.assertEquals("successfully add user0..... ", true, userDao.addUser(user));
+		Assert.assertEquals("successfully add user1..... ", true, userDao.addUser(user1));
+		Assert.assertEquals("successfully add user2..... ", true, userDao.addUser(user2));
+	}
+
 	/*@Test
 	public void getCategorybyID() {
 		category = categoryDao.getCategoryById(3);
@@ -55,13 +58,13 @@ public class UserTestCase {
 		 Assert.assertEquals("successfully update category..... ",true,
 				 categoryDao.updateCategory(category) );
 	 }*/
-	@Test
-	public void getallcat() {
-		
-		Assert.assertEquals("successfully get all catogory  from category table..... ","1",
-				 userDao.list());
-		//System.out.println(category.getName()+","+category.getImageurl());
-		
-	}
+//	@Test
+//	public void getallcat() {
+//		
+//		Assert.assertEquals("successfully get all catogory  from category table..... ","1",
+//				 userDao.list());
+//		//System.out.println(category.getName()+","+category.getImageurl());
+//		
+//	}
 
 }

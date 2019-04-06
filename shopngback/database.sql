@@ -14,17 +14,30 @@ create table category(
 
 );
 
+--CREATE TABLE user_detail (
+-- 	id IDENTITY,
+-- 	first_name VARCHAR(50),
+-- 	last_name VARCHAR(50),
+-- 	type VARCHAR(20),
+-- 	is_active BOOLEAN,
+-- 	mobile int,
+-- 	email VARCHAR(100),
+-- 	password varchar(50),
+--	CONSTRAINT pk_user_detail_id PRIMARY KEY(id)	
+--);
+
 CREATE TABLE user_detail (
  	id IDENTITY,
  	first_name VARCHAR(50),
  	last_name VARCHAR(50),
- 	type VARCHAR(20),
- 	is_active BOOLEAN,
- 	mobile int,
+ 	role VARCHAR(20),
+ 	enabled BOOLEAN,
+ 	contact_number VARCHAR(20),
  	email VARCHAR(100),
  	password varchar(50),
 	CONSTRAINT pk_user_detail_id PRIMARY KEY(id)	
 );
+
 
 //create product table
 CREATE TABLE product (

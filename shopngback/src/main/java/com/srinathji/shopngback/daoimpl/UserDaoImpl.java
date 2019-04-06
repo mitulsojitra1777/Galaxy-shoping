@@ -47,7 +47,7 @@ public class UserDaoImpl implements UserDao {
 	public boolean deleteUser(User user) {
 		try{
 			//update to the database
-			user.setActive(false);
+			user.setEnabled(false);
 			sessionFactory.getCurrentSession().update(user);
 			return true;
 		}catch(Exception ex){
@@ -66,7 +66,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public User Login(String uid, String password) {
 		// TODO Auto-generated method stub
-		String selectActiveCategory = "FROM User WHERE active= :active and email :email and password :password";
+		String selectActiveCategory = "FROM User WHERE enabled= :active and email :email and password :password";
 		Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("active", true);
 		query.setParameter("email", uid);
@@ -77,7 +77,7 @@ public class UserDaoImpl implements UserDao {
 
 	@Override
 	public List<User> list() {
-		String selectActiveCategory = "FROM User WHERE active= :active";
+		String selectActiveCategory = "FROM User WHERE enabled= :active";
 		Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
 		query.setParameter("active", true);
 

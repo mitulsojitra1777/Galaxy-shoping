@@ -10,6 +10,7 @@ public interface ProductDao {
 	boolean updateProduct(Product product);
 	boolean deleteProduct(Product product);
 	List<Product> list();
+	List<Product> getCategoryProduct(int categoryId);
 	Product getProductById(int id);
 	
 

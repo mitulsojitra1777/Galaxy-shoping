@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Product {
 	
@@ -16,13 +18,14 @@ public class Product {
 	private int id;
 	private String code;
 	private String  name;
-	private  String  brand;
-	private String  description;
+	private  String  brand; 	
+	private String  descreption;
 	@Column(name="unit_price")
 	private double unitPrice;
 	private int quntity;
 	@Column(name="is_active")
 	private boolean active;
+	@JsonIgnore
 	@Column(name="category_id")
 	private int categoryid;
 	@Column(name="suplier_id")
@@ -35,18 +38,18 @@ public class Product {
 	
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", description="
-				+ description + ", unitPrice=" + unitPrice + ", quntity=" + quntity + ", active=" + active
+		return "Product [id=" + id + ", code=" + code + ", name=" + name + ", brand=" + brand + ", descreption="
+				+ descreption + ", unitPrice=" + unitPrice + ", quntity=" + quntity + ", active=" + active
 				+ ", categoryid=" + categoryid + ", suplierid=" + suplierid + ", purchases=" + purchases + ", views="
 				+ views + "]";
 	}
 
-	public Product(String name, String brand, String description, double unitPrice, int quntity, boolean active,
+	public Product(String name, String brand, String descreption, double unitPrice, int quntity, boolean active,
 			int categoryid, int suplierid, int purchases, int views) {
 		
 		this.name = name;
 		this.brand = brand;
-		this.description = description;
+		this.descreption = descreption;
 		this.unitPrice = unitPrice;
 		this.quntity = quntity;
 		this.active = active;
@@ -69,11 +72,11 @@ public class Product {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getDescription() {
-		return description;
+	public String getDescreption() {
+		return descreption;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setDescreption(String descreption) {
+		this.descreption = descreption;
 	}
 	public double getUnitPrice() {
 		return unitPrice;

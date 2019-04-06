@@ -10,6 +10,20 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "user_detail")
 public class User {
+	
+	/*
+	 * 
+	 * CREATE TABLE user_detail (
+ 	id IDENTITY,
+ 	first_name VARCHAR(50),
+ 	last_name VARCHAR(50),
+ 	role VARCHAR(20),
+ 	enabled BOOLEAN,
+ 	contact_number int,
+ 	email VARCHAR(100),
+ 	password varchar(50),
+	CONSTRAINT pk_user_detail_id PRIMARY KEY(id)	
+); */
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
@@ -17,12 +31,29 @@ public class User {
 	private String firstName;
 	@Column(name = "last_name")
 	private String lastName;
-	private String type;
-	@Column(name = "is_active")
-	private boolean active;
-	private int mobile;
+	private String role;
+	private boolean enabled;
+	@Column(name="contact_number")
+	private String mobile;
 	private String email;
 	private String password;
+
+	
+	public User() {
+		
+	}
+
+	public User(String firstName, String lastName, String role, boolean enabled, String mobile, String email,
+			String password) {
+		
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.role = role;
+		this.enabled = enabled;
+		this.mobile = mobile;
+		this.email = email;
+		this.password = password;
+	}
 
 	public int getId() {
 		return id;
@@ -48,27 +79,27 @@ public class User {
 		this.lastName = lastName;
 	}
 
-	public String getType() {
-		return type;
+	public String getRole() {
+		return role;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setRole(String role) {
+		this.role = role;
 	}
 
-	public boolean isActive() {
-		return active;
+	public boolean isEnabled() {
+		return enabled;
 	}
 
-	public void setActive(boolean active) {
-		this.active = active;
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
-	public int getMobile() {
+	public String getMobile() {
 		return mobile;
 	}
 
-	public void setMobile(int mobile) {
+	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
 
