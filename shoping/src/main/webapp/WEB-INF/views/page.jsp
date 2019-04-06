@@ -24,6 +24,7 @@
 <!-- Bootstrap core CSS -->
 <link href="${contextRoot}/resources/css/bootstrap.min.css" rel="stylesheet">
 <link href="${contextRoot}/resources/css/r-theme.css" rel="stylesheet">
+<link href="${contextRoot}/resources/css/jquery.dataTables.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${contextRoot}/resources/css/shop-homepage.css" rel="stylesheet">
@@ -57,6 +58,7 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${contextRoot}/resources/js/jquery.min.js"></script>
 		<script src="${contextRoot}/resources/js/bootstrap.bundle.min.js"></script>
+		<script src="${contextRoot}/resources/js/jquery.dataTables.js"></script>
 		<!-- self coded JavaScript -->
 		<script src="${contextRoot}/resources/js/myapp.js"></script>
 	</div>
